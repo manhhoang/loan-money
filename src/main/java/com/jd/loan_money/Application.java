@@ -12,7 +12,9 @@ public class Application {
 
     public static void main(String[] args) throws Exception {
         if(args.length < 2) {
+            System.out.println();
             System.out.println("Missing market file and loan amount arguments.");
+            return;
         }
         final String marketFile = args[0];
         final double loanAmount = Double.parseDouble(args[1]);
@@ -42,6 +44,7 @@ public class Application {
     }
 
     private static void printLoan(final Loan loan) {
+        System.out.println();
         if(!loan.isValid()) {
             System.out.println("Loan has to be of any £100 increment between £1000 and £15000 inclusive.");
             return;
