@@ -13,6 +13,17 @@ Monthly repayment: £30.78
 Total repayment: £1108.08
 ```
 
+Spring ApplicationContext
+
+```
+private static LoanService getService() {
+    final AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfig.class);
+    final LoanService loanService = (LoanService) ctx.getBean(LOAN_SERVICE);
+    ctx.close();
+    return loanService;
+}
+```
+
 Asynchronous by CompletableFuture
 
 ```
