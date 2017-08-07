@@ -5,6 +5,12 @@ Run
 ```
 java -jar loan-money-1.0.jar Market_Data.csv 1000
 
+Output:
+
+Requested amount: £1000
+Rate: 7.0%
+Monthly repayment: £30.78
+Total repayment: £1108.08
 ```
 
 Asynchronous by CompletableFuture
